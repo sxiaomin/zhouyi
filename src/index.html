@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../icon/iconfont.css">
+    <link rel="stylesheet" href="./sass/index.css">
+
 </head>
 
 <body>
@@ -14,15 +16,65 @@
         <header></header>
         <section>
             <h3>必买大牌</h3>
-            <ul>
-                <script id="wrap" type="text/x-headlebars-template"></script>
+            <ul id="ul">
+                <script id="wrap" type="text/x-handlebars-template">
+                    {{#each html}}
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="./{{img}}">
+                            </dt>
+                            <dd>{{title}}</dd>
+                        </dl>
+                    </li>
+                    {{/each}}
+                </script>
             </ul>
             <h3>精选行业会场</h3>
-            <ul></ul>
+            <div class="main">
+                <div>
+                    <dl>
+                        <dt><img src="./img/3.jpg" alt=""></dt>
+                        <dd>笔记本电脑</dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt><img src="./img/3.jpg" alt=""></dt>
+                        <dd>笔记本电脑</dd>
+                    </dl>
+                </div>
+            </div>
         </section>
-        <footer></footer>
+        <footer>
+            <a href="">
+                <i class="iconfont">&#x3442;</i>
+                <span>主会场</span>
+            </a>
+            <a href="">
+                <i class="iconfont">&#x3442;</i>
+                <span>主会场</span>
+            </a>
+            <a href="">
+                <i class="iconfont">&#x3442;</i>
+                <span>主会场</span>
+            </a>
+            <a href="">
+                <i class="iconfont">&#x3442;</i>
+                <span>主会场</span>
+            </a>
+            <a href="">
+                <i class="iconfont">&#x3442;</i>
+                <span>主会场</span>
+            </a>
+        </footer>
     </div>
-    <script src=""></script>
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
 </body>
 
 </html>

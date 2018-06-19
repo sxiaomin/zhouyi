@@ -64,6 +64,17 @@ section {
     color: #fff;
     line-height: 0.28rem;
     font-size: .26rem; }
+  section #ul {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; }
+    section #ul li dl {
+      width: 0.6rem;
+      height: 0.6rem;
+      text-align: center; }
+      section #ul li dl dt {
+        width: 100%;
+        height: 100%; }
 
 footer {
   width: 100%;
